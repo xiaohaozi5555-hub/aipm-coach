@@ -1,0 +1,15 @@
+[
+  {
+    "case_id": "self_iteration_next_answer_001",
+    "stage": "10-self-iteration",
+    "skill": "aipm-portfolio-explainer",
+    "behavior_groups": {
+      "problem_discovery": ["问题发现", "可展示的问题发现"],
+      "product_judgment": ["产品判断", "取舍"],
+      "validation_evidence": ["验证证据", "证据"],
+      "missing_evidence": ["还缺什么证据", "仍需补充证据"],
+      "interview_expression": ["面试表达", "面试表达版本"]
+    },
+    "sample_output": "【可展示的问题发现】上轮短板是作品集表达只停留在技术改动，没有稳定讲清楚问题发现。\n【产品判断与取舍】本轮先把真实 session、严格评测和 dashboard 指标作为可信度主线，而不是堆更多 case。\n【验证证据】可以展示 improvement-backlog、active-lessons、latest-report.md、dashboard.html，以及下一轮回答是否命中补强行为。\n【还缺什么证据】还需要真实用户 session、面试官反馈、以及改造前后命中率对比。\n【面试表达版本】我把一次评测系统升级讲成 AI 产品可信度建设：先发现样本来源不可信，再设计严格模式和自我迭代机制，最后用 dashboard 证明规则在下一轮被执行。"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-05-11T18:30:00-07:00",
+  "source_note": "tests/aipm-coach-eval/fixtures/step10-learning-evaluation.md",
+  "scores": {
+    "需求分析能力": 3,
+    "产品判断能力": 3,
+    "AI 工作流理解": 4,
+    "Agent 设计能力": 4,
+    "Prompt 指令设计能力": 3,
+    "评估验证能力": 2,
+    "项目交付能力": 2,
+    "作品集表达能力": 2,
+    "学习复盘能力": 4,
+    "工具协作能力": 4
+  },
+  "strengths": ["AI 工作流理解", "Agent 设计能力"],
+  "weaknesses": ["评估验证能力"],
+  "summary": "测试记录 4。",
+  "next_tasks": ["设计模块测试用例"]
+}

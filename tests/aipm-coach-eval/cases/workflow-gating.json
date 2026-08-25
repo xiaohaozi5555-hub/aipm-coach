@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "gating_gap_without_10_001",
+    "stage": "03-workflow-gating",
+    "user_input": "直接给我做AIPM能力差距评估",
+    "must_include": ["上下文不足", "10 学习吸收评估"],
+    "forbidden_terms": ["能力雷达图数据", "\"scores\""],
+    "sample_output": "【上下文不足】缺少：10 学习吸收评估结果\n需要补充：请先完成 10 学习吸收评估。"
+  },
+  {
+    "case_id": "gating_learning_without_09_001",
+    "stage": "03-workflow-gating",
+    "user_input": "还没有回答复盘问题，但你先评估我的学习吸收",
+    "must_include": ["上下文不足", "09 复盘问题"],
+    "forbidden_terms": ["理解度：", "总体判断"],
+    "sample_output": "【上下文不足】缺少：09 复盘问题和用户回答\n需要补充：请先完成 09 复盘提问并回答。"
+  },
+  {
+    "case_id": "gating_reflection_without_08_001",
+    "stage": "03-workflow-gating",
+    "user_input": "直接问我复盘问题",
+    "must_include": ["上下文不足", "08 知识笔记"],
+    "forbidden_terms": ["1.", "2.", "3."],
+    "sample_output": "【上下文不足】缺少：08 知识笔记\n需要补充：请先完成知识记录，再进入复盘提问。"
+  },
+  {
+    "case_id": "gating_confirm_to_09_001",
+    "stage": "03-workflow-gating",
+    "user_input": "知识笔记确认无误，继续",
+    "must_include": ["aipm-reflection-questioner", "09"],
+    "forbidden_terms": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "sample_output": "进入 09：调用 aipm-reflection-questioner，基于 08 知识笔记提出 1-3 个复盘问题。"
+  },
+  {
+    "case_id": "gating_answer_to_10_001",
+    "stage": "03-workflow-gating",
+    "user_input": "我已经回答完09的问题，请继续",
+    "must_include": ["aipm-learning-evaluator", "10"],
+    "forbidden_terms": ["aipm-gap-evaluator", "能力雷达图数据"],
+    "sample_output": "进入 10：调用 aipm-learning-evaluator，携带 08 知识笔记、09 问题和用户回答做学习吸收评估。"
+  }
+]

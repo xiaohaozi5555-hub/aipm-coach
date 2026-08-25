@@ -1,0 +1,40 @@
+[
+  {
+    "case_id": "structure_router_001",
+    "stage": "04-output-structure",
+    "required_sections": ["问题类型", "输入判断", "调用模块", "执行顺序", "记录者触发", "是否进入复盘评估", "给主教练的执行指令", "已读取的教练规则"],
+    "sample_output": "【问题类型】项目设计\n【输入判断】有项目想法\n【调用模块】aipm-guide、aipm-recorder\n【执行顺序】先指导后记录\n【记录者触发】是\n【是否进入复盘评估】否\n【给主教练的执行指令】给出拆解路径\n【已读取的教练规则】无"
+  },
+  {
+    "case_id": "structure_gap_json_001",
+    "stage": "04-output-structure",
+    "required_sections": ["本轮反映出的能力状态", "相关 AIPM 能力维度", "能力雷达图数据", "历史对比", "优先补强方向", "下一步训练任务", "作品集启发", "教练自我改进建议", "雷达图生成指令", "雷达图文件"],
+    "requires_json": true,
+    "requires_score_dimensions": true,
+    "sample_output": "【本轮反映出的能力状态】整体进步\n【相关 AIPM 能力维度】需求分析能力等\n【能力雷达图数据】\n```json\n{\"scores\":{\"需求分析能力\":4,\"产品判断能力\":4,\"AI 工作流理解\":4,\"Agent 设计能力\":5,\"Prompt 指令设计能力\":4,\"评估验证能力\":3,\"项目交付能力\":3,\"作品集表达能力\":3,\"学习复盘能力\":4,\"工具协作能力\":5}}\n```\n【历史对比】提升\n【优先补强方向】评估验证\n【下一步训练任务】补测试用例\n【作品集启发】表达验证证据\n【教练自我改进建议】\n```json\n{\"coach_self_improvement\":[{\"weakness\":\"作品集表达证据不足\",\"evidence\":[\"latest.json 中作品集表达能力较低\"],\"coach_improvement\":\"下次把评测机制转成项目叙事\",\"target_skill\":\"aipm-portfolio-explainer\",\"expected_next_behavior\":\"输出问题发现、产品判断、验证证据和面试表达版本\",\"eval_signal\":[\"后续作品集表达能力评分提升\"]}]}\n```\n【雷达图生成指令】python plugins\\aipm-coach\\scripts\\generate_capability_radar.py --input <scores-json> --output-root coach-data\\capability-radar\n【雷达图文件】coach-data/capability-radar/YYYY-MM-DD-HH-mm-capability-radar.png"
+  },
+  {
+    "case_id": "structure_learning_eval_001",
+    "stage": "04-output-structure",
+    "required_sections": ["评估依据", "用户回答覆盖情况", "吸收评估分数", "总体判断", "需要修正的理解", "补强建议", "给 11 AIPM 差距评估模块的输入摘要"],
+    "sample_output": "【评估依据】基于 08 和 09\n【用户回答覆盖情况】覆盖主要知识点\n【吸收评估分数】理解度：4/5，准确度：4/5，迁移度：3/5，应用度：3/5，表达度：3/5\n【总体判断】基本掌握\n【需要修正的理解】暂无\n【补强建议】补验证指标\n【给 11 AIPM 差距评估模块的输入摘要】用户理解较好，表达仍需加强"
+  },
+  {
+    "case_id": "structure_recorder_001",
+    "stage": "04-output-structure",
+    "required_sections": ["本轮主题", "作品集表达材料", "关键知识点", "方法步骤", "可迁移场景", "后续评估重点"],
+    "sample_output": "【本轮主题】Agent 项目拆解\n【作品集表达材料】问题发现、产品判断、AI / Agent 设计亮点、验证证据和面试表达版本\n【关键知识点】边界和验证\n【方法步骤】先定义用户，再拆流程\n【可迁移场景】作品集和面试\n【后续评估重点】能否迁移应用"
+  },
+  {
+    "case_id": "structure_portfolio_explainer_001",
+    "stage": "04-output-structure",
+    "required_sections": ["作品集转化判断", "本轮内容如何变成作品集素材", "可展示的问题发现", "产品判断与取舍", "AI / Agent 设计亮点", "验证证据", "面试表达版本", "还缺什么证据", "交给 08 记录者的沉淀摘要"],
+    "sample_output": "【作品集转化判断】适合转化为作品集素材\n【本轮内容如何变成作品集素材】把评测机制升级整理成 AI 产品可信度建设案例\n【可展示的问题发现】内置样例会让 100 分失真\n【产品判断与取舍】严格真实评测优先，样例冒烟测试只验证脚本\n【AI / Agent 设计亮点】router 到 recorder 再到 evaluator 的可观测闭环\n【验证证据】dashboard、case 证据、雷达图和历史记录\n【面试表达版本】我先识别评测可信度问题，再设计样本来源分层和证据展示\n【还缺什么证据】补齐真实 E2E 样本\n【交给 08 记录者的沉淀摘要】记录问题发现、判断、取舍、证据和面试表达"
+  },
+  {
+    "case_id": "structure_visual_001",
+    "stage": "04-output-structure",
+    "required_terms": ["```mermaid", "flowchart"],
+    "sample_output": "```mermaid\nflowchart TD\nA[问题] --> B[分析]\nB --> C[行动]\n```"
+  }
+]

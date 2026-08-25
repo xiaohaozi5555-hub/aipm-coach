@@ -1,0 +1,37 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+node_modules/
+dist/
+build/
+.next/
+__pycache__/
+*.py[cod]
+*.log
+secrets/
+
+# Personal coaching data generated at runtime
+coach-data/knowledge-notes/*.md
+!coach-data/knowledge-notes/.gitkeep
+coach-data/session-drafts/*.json
+coach-data/session-runs/*.json
+coach-data/screenshots/
+coach-data/capability-radar/*.png
+coach-data/capability-radar/history.jsonl
+coach-data/capability-radar/latest.json
+coach-data/capability-radar/index.md
+coach-data/improvement-backlog.jsonl
+
+# Real answers and generated evaluation artifacts
+tests/aipm-coach-eval/samples/*.txt
+!tests/aipm-coach-eval/samples/.gitkeep
+tests/aipm-coach-eval/reports/*
+!tests/aipm-coach-eval/reports/.gitkeep
+
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

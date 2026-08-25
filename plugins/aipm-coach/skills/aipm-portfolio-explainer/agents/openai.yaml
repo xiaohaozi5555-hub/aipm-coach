@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 作品集转化讲解者"
+  short_description: "把教练过程转成作品集、面试表达和项目叙事材料。"
+  default_prompt: "Use $aipm-portfolio-explainer to turn this AIPM coaching round into portfolio and interview expression material."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 差距评估者"
+  short_description: "生成 AIPM 能力差距评估、雷达图数据和历史对比。"
+  default_prompt: "Use $aipm-gap-evaluator after learning evaluation to score my AIPM capabilities and generate radar data."
+
+policy:
+  allow_implicit_invocation: true

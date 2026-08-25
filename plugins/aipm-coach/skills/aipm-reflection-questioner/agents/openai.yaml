@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 复盘提问者"
+  short_description: "在用户确认 08 知识笔记后，主动提出复盘问题。"
+  default_prompt: "Use $aipm-reflection-questioner after I confirm the AIPM knowledge note."
+
+policy:
+  allow_implicit_invocation: true

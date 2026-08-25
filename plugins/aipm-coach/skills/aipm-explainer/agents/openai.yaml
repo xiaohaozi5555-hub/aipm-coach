@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 讲解者"
+  short_description: "用新手 AIPM 能理解的方式解释概念和流程。"
+  default_prompt: "Use $aipm-explainer to explain this concept for a beginner AIPM."
+
+policy:
+  allow_implicit_invocation: true

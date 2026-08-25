@@ -1,0 +1,75 @@
+[
+  {
+    "case_id": "boundary_guide_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-guide",
+    "must_include": ["行动路径", "优先级", "下一步"],
+    "forbidden_terms": ["能力雷达图数据", "学习吸收评分"],
+    "sample_output": "【行动路径】先确定用户、场景、输入输出，再拆第一版功能\n【优先级】先做可演示闭环，再补扩展能力\n【下一步】写出三条用户任务和验证指标"
+  },
+  {
+    "case_id": "boundary_explainer_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-explainer",
+    "must_include": ["概念", "原理", "例子"],
+    "forbidden_terms": ["长期能力差距", "雷达图生成指令"],
+    "sample_output": "【概念】Agent 工作流是能基于目标执行多步任务的流程\n【原理】它通常包含理解、规划、工具调用和校验\n【例子】客服 Agent 会先识别问题，再查资料，再生成回复"
+  },
+  {
+    "case_id": "boundary_expert_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-expert-discussion",
+    "must_include": ["取舍", "风险", "追问"],
+    "forbidden_terms": ["history.jsonl", "能力雷达图数据"],
+    "sample_output": "【取舍】作品集项目要优先证明产品判断，而不是堆工具\n【风险】范围过大时难以交付证据\n【追问】你希望面试官记住你的哪一个判断？"
+  },
+  {
+    "case_id": "boundary_visual_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-visual-explainer",
+    "must_include": ["mermaid", "flowchart"],
+    "forbidden_terms": ["最终评分", "学习吸收评估"],
+    "sample_output": "```mermaid\nflowchart TD\nA[用户问题] --> B[需求理解]\nB --> C[Agent 规划]\nC --> D[执行和校验]\n```"
+  },
+  {
+    "case_id": "boundary_portfolio_explainer_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-portfolio-explainer",
+    "must_include": ["作品集素材", "问题发现", "产品判断", "AI / Agent 设计亮点", "验证证据", "面试表达", "还缺什么证据"],
+    "forbidden_terms": ["能力雷达图数据", "学习吸收评分", "继续进入 12"],
+    "sample_output": "【本轮内容如何变成作品集素材】把评测系统升级讲成可信度建设项目\n【可展示的问题发现】旧评测把内置样例当真实回答\n【产品判断与取舍】默认严格评测，样例只用于冒烟\n【AI / Agent 设计亮点】把路由、记录、评估链路变成可观测 workflow\n【验证证据】dashboard、case 证据、样本来源\n【面试表达版本】我发现旧评测 100 分不可信，所以设计了样本来源分层和证据展示\n【还缺什么证据】真实 E2E 样本和对比运行结果"
+  },
+  {
+    "case_id": "boundary_recorder_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-recorder",
+    "must_include": ["本轮主题", "关键知识点", "后续评估重点"],
+    "forbidden_terms": ["理解度：", "能力雷达图数据"],
+    "sample_output": "【本轮主题】Agent 作品集项目拆解\n【关键知识点】需求边界、工作流拆分、验证指标\n【后续评估重点】用户是否能迁移到自己的项目"
+  },
+  {
+    "case_id": "boundary_reflection_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-reflection-questioner",
+    "must_include": ["？"],
+    "forbidden_terms": ["理解度：", "总体判断", "能力雷达图"],
+    "max_questions": 3,
+    "sample_output": "1. 你会如何判断第一版边界足够小？\n2. 你会用什么指标证明用户问题被解决？\n3. 你会如何把这个判断写进作品集？"
+  },
+  {
+    "case_id": "boundary_learning_eval_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-learning-evaluator",
+    "must_include": ["理解度", "准确度", "迁移度", "应用度", "表达度"],
+    "forbidden_terms": ["10 维能力", "雷达图生成指令"],
+    "sample_output": "【吸收评估分数】\n理解度：4/5，依据：能解释项目边界\n准确度：4/5，依据：没有明显误解\n迁移度：3/5，依据：能部分迁移\n应用度：3/5，依据：能落到当前项目\n表达度：3/5，依据：作品集表达还需加强"
+  },
+  {
+    "case_id": "boundary_gap_eval_001",
+    "stage": "02-module-boundary",
+    "skill": "aipm-gap-evaluator",
+    "must_include": ["能力雷达图数据", "历史对比", "雷达图生成指令", "雷达图文件"],
+    "forbidden_terms": ["继续进入 12", "重新回答复盘问题"],
+    "sample_output": "【能力雷达图数据】\n```json\n{\"scores\":{\"需求分析能力\":4,\"产品判断能力\":4,\"AI 工作流理解\":4,\"Agent 设计能力\":5,\"Prompt 指令设计能力\":4,\"评估验证能力\":3,\"项目交付能力\":3,\"作品集表达能力\":3,\"学习复盘能力\":4,\"工具协作能力\":5}}\n```\n【历史对比】本轮较上轮提升\n【雷达图生成指令】python plugins\\aipm-coach\\scripts\\generate_capability_radar.py --input <scores-json> --output-root coach-data\\capability-radar\n【雷达图文件】coach-data/capability-radar/YYYY-MM-DD-HH-mm-capability-radar.png"
+  }
+]

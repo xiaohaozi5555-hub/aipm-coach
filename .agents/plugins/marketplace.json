@@ -1,0 +1,20 @@
+{
+  "name": "aipm-coach-marketplace",
+  "interface": {
+    "displayName": "AIPM Coach"
+  },
+  "plugins": [
+    {
+      "name": "aipm-coach",
+      "source": {
+        "source": "local",
+        "path": "./plugins/aipm-coach"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

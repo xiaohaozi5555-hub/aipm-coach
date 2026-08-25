@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 专家讨论者"
+  short_description: "结合追问、取舍分析和专家建议来提升方案质量。"
+  default_prompt: "Use $aipm-expert-discussion to critique and discuss my AIPM idea."
+
+policy:
+  allow_implicit_invocation: true

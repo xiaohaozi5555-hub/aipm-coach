@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 记录者"
+  short_description: "在 03-06 后主动沉淀结构化 AIPM 知识笔记。"
+  default_prompt: "Use $aipm-recorder to create a structured AIPM knowledge note from this coaching round."
+
+policy:
+  allow_implicit_invocation: true

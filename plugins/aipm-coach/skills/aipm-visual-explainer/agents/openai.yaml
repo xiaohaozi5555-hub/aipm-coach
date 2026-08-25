@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 可视化讲解者"
+  short_description: "用 Mermaid、表格或生图提示词把问题可视化。"
+  default_prompt: "Use $aipm-visual-explainer to visualize this AIPM workflow or concept."
+
+policy:
+  allow_implicit_invocation: true

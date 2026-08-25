@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 指导者"
+  short_description: "把实际问题推进为可执行行动路径。"
+  default_prompt: "Use $aipm-guide to turn my AIPM problem into concrete next steps."
+
+policy:
+  allow_implicit_invocation: true

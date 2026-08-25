@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM 学习吸收评估者"
+  short_description: "基于 08 知识笔记、09 问题和用户回答做对照评估。"
+  default_prompt: "Use $aipm-learning-evaluator to evaluate my answer against the AIPM knowledge note and reflection questions."
+
+policy:
+  allow_implicit_invocation: true

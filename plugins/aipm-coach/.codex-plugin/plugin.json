@@ -1,0 +1,41 @@
+{
+  "name": "aipm-coach",
+  "version": "0.1.0",
+  "description": "A modular Codex coaching workflow for AI product-management learning, projects, portfolio expression, reflection, and evidence-based evaluation.",
+  "author": {
+    "name": "肖晨昊",
+    "url": "https://github.com/xiaohaozi5555-hub"
+  },
+  "homepage": "https://github.com/xiaohaozi5555-hub/aipm-coach",
+  "repository": "https://github.com/xiaohaozi5555-hub/aipm-coach",
+  "license": "UNLICENSED",
+  "keywords": [
+    "aipm",
+    "coach",
+    "product-management",
+    "agent-workflow",
+    "learning-evaluation",
+    "portfolio"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AIPM Coach",
+    "shortDescription": "把 AIPM 问题路由到指导、讲解、讨论、记录与评估模块。",
+    "longDescription": "AIPM Coach 是一个模块化 Codex 教练插件，覆盖问题路由、实操指导、概念讲解、专家讨论、可视化、作品集转化、知识记录、复盘提问、学习吸收评估、长期能力差距与教练自我改进闭环。",
+    "developerName": "肖晨昊",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Screenshot"
+    ],
+    "defaultPrompt": [
+      "AIPM教练：按完整流程处理我的项目问题，并在结束后保存评测记录。",
+      "AIPM教练：解释这个概念，并结合我的项目给出下一步。",
+      "AIPM教练：分析这张截图，把结论转成作品集表达。"
+    ],
+    "brandColor": "#2563EB",
+    "websiteURL": "https://github.com/xiaohaozi5555-hub/aipm-coach",
+    "screenshots": []
+  }
+}

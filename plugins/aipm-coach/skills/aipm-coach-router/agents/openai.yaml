@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIPM Coach Router"
+  short_description: "Decides which AIPM coaching modules should handle a question."
+  default_prompt: "Use $aipm-coach-router to classify my AIPM question and choose the coaching modules."
+
+policy:
+  allow_implicit_invocation: true

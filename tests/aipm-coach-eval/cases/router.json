@@ -1,0 +1,104 @@
+[
+  {
+    "case_id": "router_project_design_001",
+    "stage": "01-router",
+    "user_input": "我想做一个AI产品经理作品集项目，但不知道怎么拆功能",
+    "expected_modules": ["aipm-guide", "aipm-expert-discussion", "aipm-visual-explainer", "aipm-portfolio-explainer", "aipm-recorder"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "输入判断", "调用模块", "执行顺序", "记录者触发"],
+    "complex_case": true,
+    "sample_output": "【问题类型】项目设计问题\n【输入判断】有产品想法但缺少拆解路径\n【调用模块】aipm-guide、aipm-expert-discussion、aipm-visual-explainer、aipm-portfolio-explainer、aipm-recorder\n【执行顺序】先指导，再讨论取舍，再可视化结构，再做作品集转化讲解，最后记录\n【记录者触发】是，进入 03-06 正常教练流程且作品集讲解完成后记录\n【作品集讲解者触发】是，项目设计可转化为作品集素材\n【是否进入复盘评估】否\n【给主教练的执行指令】围绕项目边界、功能拆分和作品集表达组织回答"
+  },
+  {
+    "case_id": "router_concept_001",
+    "stage": "01-router",
+    "user_input": "Agent 工作流和普通自动化有什么区别？",
+    "expected_modules": ["aipm-explainer", "aipm-visual-explainer", "aipm-portfolio-explainer", "aipm-recorder"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "调用模块", "执行顺序", "记录者触发"],
+    "sample_output": "【问题类型】概念解释\n【输入判断】用户询问 Agent 工作流概念\n【调用模块】aipm-explainer、aipm-visual-explainer、aipm-portfolio-explainer、aipm-recorder\n【执行顺序】先解释概念，再用结构图辅助理解，再提炼 Agent 项目表达价值，最后记录\n【记录者触发】是\n【作品集讲解者触发】是，问题涉及 Agent 工作流\n【是否进入复盘评估】否\n【给主教练的执行指令】用对比方式解释概念，并补充可沉淀的 Agent 表达素材"
+  },
+  {
+    "case_id": "router_tradeoff_001",
+    "stage": "01-router",
+    "user_input": "我这个AI面试助手想法适不适合做作品集？",
+    "expected_modules": ["aipm-expert-discussion", "aipm-guide", "aipm-portfolio-explainer", "aipm-recorder"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "调用模块", "执行顺序", "记录者触发"],
+    "sample_output": "【问题类型】想法判断与取舍\n【输入判断】需要判断作品集价值和可行性\n【调用模块】aipm-expert-discussion、aipm-guide、aipm-portfolio-explainer、aipm-recorder\n【执行顺序】先专家讨论，再给行动建议，再输出作品集转化讲解，最后记录\n【记录者触发】是\n【作品集讲解者触发】是，问题直接涉及 AI 面试助手作品集表达\n【是否进入复盘评估】否\n【给主教练的执行指令】从差异化、验证证据和表达价值判断"
+  },
+  {
+    "case_id": "router_screenshot_001",
+    "stage": "01-router",
+    "user_input": "我发一张低代码画布截图，你帮我分析流程哪里有问题",
+    "expected_modules": ["aipm-guide", "aipm-explainer", "aipm-visual-explainer", "aipm-recorder"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "输入判断", "调用模块", "执行顺序", "记录者触发"],
+    "complex_case": true,
+    "sample_output": "【问题类型】截图分析和流程诊断\n【输入判断】包含截图上下文，需要流程可视化\n【调用模块】aipm-guide、aipm-explainer、aipm-visual-explainer、aipm-recorder\n【执行顺序】先定位问题，再解释原因，再画流程图，最后记录\n【记录者触发】是\n【是否进入复盘评估】否\n【给主教练的执行指令】结合截图描述流程节点、断点和修复建议"
+  },
+  {
+    "case_id": "router_tool_env_001",
+    "stage": "01-router",
+    "user_input": "我的本地预览 localhost:3000 打不开，应该怎么查？",
+    "expected_modules": ["aipm-guide", "aipm-explainer", "aipm-recorder"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "调用模块", "执行顺序", "记录者触发"],
+    "sample_output": "【问题类型】工具或环境卡点\n【输入判断】需要排障步骤和原理解释\n【调用模块】aipm-guide、aipm-explainer、aipm-recorder\n【执行顺序】先排查服务和端口，再解释 localhost 语义，最后记录\n【记录者触发】是\n【是否进入复盘评估】否\n【给主教练的执行指令】按运行进程、端口、绑定地址、隧道顺序排查"
+  },
+  {
+    "case_id": "router_portfolio_001",
+    "stage": "01-router",
+    "user_input": "我想把这个项目写进AI产品经理作品集，怎么表达更像真实项目？",
+    "expected_modules": ["aipm-guide", "aipm-expert-discussion", "aipm-portfolio-explainer", "aipm-recorder"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "调用模块", "执行顺序", "记录者触发"],
+    "sample_output": "【问题类型】面试作品集表达\n【输入判断】需要项目叙事和取舍建议\n【调用模块】aipm-guide、aipm-expert-discussion、aipm-portfolio-explainer、aipm-recorder\n【执行顺序】先给表达结构，再讨论亮点取舍，再输出作品集转化讲解，最后记录\n【记录者触发】是\n【作品集讲解者触发】是，用户明确要求写进 AI 产品经理作品集\n【是否进入复盘评估】否\n【给主教练的执行指令】围绕背景、决策、验证和结果表达"
+  },
+  {
+    "case_id": "router_learning_confusion_001",
+    "stage": "01-router",
+    "user_input": "我学了很多AI工具，但不知道怎么形成产品经理能力",
+    "expected_modules": ["aipm-explainer", "aipm-expert-discussion", "aipm-recorder"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "调用模块", "执行顺序", "记录者触发"],
+    "sample_output": "【问题类型】学习困惑\n【输入判断】需要解释能力结构并讨论学习路径\n【调用模块】aipm-explainer、aipm-expert-discussion、aipm-recorder\n【执行顺序】先解释能力模型，再讨论取舍，最后记录\n【记录者触发】是\n【是否进入复盘评估】否\n【给主教练的执行指令】把工具学习映射到产品能力"
+  },
+  {
+    "case_id": "router_reflection_confirm_001",
+    "stage": "01-router",
+    "user_input": "这份知识笔记没问题，可以进入复盘",
+    "expected_modules": ["aipm-reflection-questioner"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "调用模块", "执行顺序"],
+    "sample_output": "【问题类型】复盘确认\n【输入判断】用户确认 08 知识笔记，可以进入 09\n【调用模块】aipm-reflection-questioner\n【执行顺序】基于 08 知识笔记提出 1-3 个复盘问题\n【记录者触发】否\n【是否进入复盘评估】是，进入 09\n【给主教练的执行指令】不要直接评分，只提问"
+  },
+  {
+    "case_id": "router_learning_eval_001",
+    "stage": "01-router",
+    "user_input": "我已经回答了复盘问题，请评估我的吸收情况",
+    "expected_modules": ["aipm-learning-evaluator"],
+    "forbidden_modules": ["aipm-gap-evaluator"],
+    "must_include": ["问题类型", "调用模块", "执行顺序"],
+    "sample_output": "【问题类型】学习吸收评估\n【输入判断】用户已回答 09，需要携带 08、09 和用户回答\n【调用模块】aipm-learning-evaluator\n【执行顺序】先核对上下文，再评估理解度、准确度、迁移度、应用度、表达度\n【记录者触发】否\n【是否进入复盘评估】是，进入 10\n【给主教练的执行指令】不要做长期能力差距评估"
+  },
+  {
+    "case_id": "router_gap_eval_001",
+    "stage": "01-router",
+    "user_input": "学习吸收评估完成了，帮我做最终AIPM能力差距评估",
+    "expected_modules": ["aipm-gap-evaluator"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-recorder"],
+    "must_include": ["问题类型", "调用模块", "执行顺序"],
+    "sample_output": "【问题类型】AIPM 能力差距评估\n【输入判断】10 学习吸收评估已完成，可以进入 11\n【调用模块】aipm-gap-evaluator\n【执行顺序】基于 08、09、用户回答和 10 结果做能力差距评估\n【记录者触发】否\n【是否进入复盘评估】否，进入最后一步 11\n【给主教练的执行指令】生成 10 维能力雷达图数据"
+  },
+  {
+    "case_id": "router_eval_system_portfolio_001",
+    "stage": "01-router",
+    "user_input": "我刚升级了AI教练评测系统，想复盘成作品集项目和面试表达",
+    "expected_modules": ["aipm-guide", "aipm-expert-discussion", "aipm-portfolio-explainer", "aipm-recorder"],
+    "forbidden_modules": ["aipm-learning-evaluator", "aipm-gap-evaluator"],
+    "must_include": ["问题类型", "输入判断", "调用模块", "执行顺序", "记录者触发", "作品集讲解者触发"],
+    "complex_case": true,
+    "sample_output": "【问题类型】评测系统复盘与作品集表达\n【输入判断】涉及 AI 教练评测系统、项目复盘、作品集和面试表达\n【调用模块】aipm-guide、aipm-expert-discussion、aipm-portfolio-explainer、aipm-recorder\n【执行顺序】先梳理复盘结构，再讨论产品判断和取舍，再输出作品集转化讲解，最后记录\n【记录者触发】是，作品集讲解完成后进入 08 知识笔记\n【作品集讲解者触发】是，问题涉及评测系统、项目复盘和面试表达\n【是否进入复盘评估】否\n【给主教练的执行指令】围绕问题发现、产品判断、AI/Agent 设计亮点、验证证据和面试表达组织回答"
+  }
+]

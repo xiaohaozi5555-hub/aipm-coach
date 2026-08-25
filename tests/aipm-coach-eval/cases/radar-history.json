@@ -1,0 +1,11 @@
+[
+  {
+    "case_id": "radar_history_001",
+    "stage": "06-radar-history",
+    "input_glob": "fixtures/radar-input-*.json",
+    "expected_runs": 6,
+    "expected_history_count": 6,
+    "expected_latest_count": 5,
+    "expects_clamp": true
+  }
+]

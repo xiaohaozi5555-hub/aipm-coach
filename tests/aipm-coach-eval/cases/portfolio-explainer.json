@@ -1,0 +1,17 @@
+[
+  {
+    "case_id": "portfolio_explainer_eval_system_001",
+    "stage": "09-portfolio-explainer",
+    "skill": "aipm-portfolio-explainer",
+    "signal_groups": {
+      "portfolio_material": ["作品集素材", "作品集表达材料", "本轮内容如何变成作品集素材"],
+      "problem_discovery": ["问题发现", "可展示的问题发现"],
+      "product_judgment": ["产品判断", "产品判断与取舍"],
+      "validation_evidence": ["验证证据", "证据"],
+      "interview_expression": ["面试表达", "面试表达版本"],
+      "missing_evidence": ["还缺什么证据", "仍需补充证据", "缺什么证据"]
+    },
+    "forbidden_terms": ["能力雷达图数据", "学习吸收评分", "继续进入 12"],
+    "sample_output": "【作品集转化判断】适合转化为作品集素材：这是一个 AI 教练评测可信度建设项目。\n【本轮内容如何变成作品集素材】可以把真实 session 采集、严格样本来源、dashboard 指标和自我迭代规则串成一个可复盘案例。\n【可展示的问题发现】旧评测会把 sample_output 当成真实回答，导致 100 分不可信；真实 session 没有被稳定转成 samples/<case_id>.txt。\n【产品判断与取舍】优先保证严格模式可信，允许 --allow-fixtures 只做冒烟；先观测真实样本和短板闭环，再扩展更多能力分。\n【验证证据】报告展示 real_sample、embedded_sample、missing_sample，dashboard 展示真实 session 数、可转样本数、作品集讲解命中率和规则数量。\n【面试表达版本】我发现 AI 教练评测的核心风险不是规则少，而是样本来源不可追踪，所以把真实会话、评测样本、规则吸收和下一轮行为放进同一个可观测闭环。\n【还缺什么证据】还需要补齐更多真实 E2E session、对比改造前后命中率，并保存用户对作品集表达的反馈。"
+  }
+]
